@@ -1,0 +1,17 @@
+{
+    "name": "Miscellaneous",
+    "keywords": "timer, edge, pulse",
+    "description": "An Arduino library to help",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pikolo84/Miscellaneous.git"
+    },
+    "version": "0.1",
+    "exclude": "tests",
+    "examples": "examples/*/*.ino",
+    "frameworks": "arduino",
+    "platforms": [
+        "atmelavr",
+        "espressif"
+    ]
+}
