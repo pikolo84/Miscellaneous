@@ -13,5 +13,7 @@ bool TimerOn::Check(bool input) {
   else {
     if (millis() >= (_previousMillis+_time))
       return true;
+    else
+      return false;
   }
 }
