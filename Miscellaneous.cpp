@@ -6,11 +6,12 @@ void TimerOn::SetTimer(unsigned long time) {
 }
 
 bool TimerOn::Check(bool input) {
-  if (!input)
+  if (!input) {
     _previousMillis = millis();
     return false;
+  }
   else {
-    if (millis() > (_previousMillis+_time))
+    if (millis() >= (_previousMillis+_time))
       return true;
-  }  
+  }
 }
