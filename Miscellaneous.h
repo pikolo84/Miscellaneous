@@ -14,7 +14,7 @@ class TimerOn
 class TimerOff
 {
   private:
-    unsigned long _prevsiousMillis = 0;
+    unsigned long _previousMillis = 0;
     unsigned long _time = 0;
   public:
     void SetTimer(unsigned long time);
