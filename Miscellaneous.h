@@ -15,7 +15,7 @@ class TimerOff
 {
   private:
     unsigned long _prevsiousMillis = 0;
-    unsigned long _time = 0;s
+    unsigned long _time = 0;
   public:
     void SetTimer(unsigned long time);
     bool Check(bool input);
@@ -36,7 +36,5 @@ class NegEdge
   public:
     bool Check (bool);
 };
-
-//Debounce es lo proximo
 
 #endif /* Miscellaneous_h */
