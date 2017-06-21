@@ -18,6 +18,10 @@ bool TimerOn::Check(bool input) {
   }
 }
 
+void TimerOn::Reset(void) {
+  _previousMillis = millis();
+}
+
 void TimerOff::SetTimer(unsigned long time) {
   _time = time;
 }
@@ -33,6 +37,10 @@ bool TimerOff::Check(bool input) {
     else
       return true;
   }
+}
+
+void TimerOff::Reset(void) {
+  _previousMillis = millis();
 }
 
 bool PosEdge::Check (bool input) {
