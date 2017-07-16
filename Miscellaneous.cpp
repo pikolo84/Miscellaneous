@@ -11,7 +11,7 @@ bool TimerOn::Check(bool input) {
     return false;
   }
   else {
-    if (millis() >= (_previousMillis+_time))
+    if (millis()-_previousMillis >= _time)
       return true;
     else
       return false;
@@ -32,7 +32,7 @@ bool TimerOff::Check(bool input) {
     return true;
   }
   else {
-    if (millis() >= (_previousMillis+_time))
+    if (millis()-_previousMillis >= _time)
       return false;
     else
       return true;
