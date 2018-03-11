@@ -1,6 +1,10 @@
 #include <Arduino.h>
 #include <Miscellaneous.h>
 
+TimerOn::TimerOn(unsigned long time){
+  SetTimer(time);
+}
+
 void TimerOn::SetTimer(unsigned long time) {
   _time = time;
 }
@@ -20,6 +24,10 @@ bool TimerOn::Check(bool input) {
 
 void TimerOn::Reset(void) {
   _previousMillis = millis();
+}
+
+TimerOff::TimerOff(unsigned long time){
+  SetTimer(time);
 }
 
 void TimerOff::SetTimer(unsigned long time) {

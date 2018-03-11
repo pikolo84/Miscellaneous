@@ -7,6 +7,7 @@ class TimerOn
     unsigned long _previousMillis = 0;
     unsigned long _time = 0;
   public:
+    TimerOn(unsigned long time);
     void SetTimer(unsigned long time);
     bool Check(bool input = true);
     void Reset(void);
@@ -18,6 +19,7 @@ class TimerOff
     unsigned long _previousMillis = 0;
     unsigned long _time = 0;
   public:
+    TimerOff(unsigned long time);
     void SetTimer(unsigned long time);
     bool Check(bool input = false);
     void Reset(void);
