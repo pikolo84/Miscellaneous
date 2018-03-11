@@ -8,6 +8,7 @@ class TimerOn
     unsigned long _time = 0;
   public:
     TimerOn(unsigned long time);
+    TimerOn();
     void SetTimer(unsigned long time);
     bool Check(bool input = true);
     void Reset(void);
@@ -20,6 +21,7 @@ class TimerOff
     unsigned long _time = 0;
   public:
     TimerOff(unsigned long time);
+    TimerOff();
     void SetTimer(unsigned long time);
     bool Check(bool input = false);
     void Reset(void);

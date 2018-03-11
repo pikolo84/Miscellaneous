@@ -5,6 +5,9 @@ TimerOn::TimerOn(unsigned long time){
   SetTimer(time);
 }
 
+TimerOn::TimerOn(){
+}
+
 void TimerOn::SetTimer(unsigned long time) {
   _time = time;
 }
