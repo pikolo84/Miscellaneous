@@ -85,7 +85,7 @@ bool LinearRamp::handle (float input, float *output, float rampUp, float rampDow
   _previousMillis = millis();
   float tempOutput = *output;
   float tempIncrement = (maxValue / rampUp) * elapsedMillis / 1000.0;
-  float tempDecrement = (maxValue / rampUp) * elapsedMillis / 1000.0;
+  float tempDecrement = (maxValue / rampDown) * elapsedMillis / 1000.0;
   if (input > tempOutput) {
     if (tempOutput >= 0)
       tempOutput += tempIncrement;
