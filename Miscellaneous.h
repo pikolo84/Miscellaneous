@@ -1,5 +1,6 @@
 #ifndef Miscellaneous_h
 #define Miscellaneous_h
+#include <Arduino.h>
 
 class TimerOn
 {
@@ -43,4 +44,11 @@ class NegEdge
     bool Check (bool);
 };
 
+class LinearRamp
+{
+  private:
+    unsigned long _previousMillis = 0;
+  public:
+    bool handle (float input, float *output, float rampUp = 0.0, float rampDown = 0.0, float maxValue = 0.0);
+};
 #endif /* Miscellaneous_h */

@@ -75,3 +75,33 @@ bool NegEdge::Check (bool input) {
     return false;
   }
 }
+
+bool LinearRamp::handle (float input, float *output, float rampUp, float rampDown, float maxValue) {
+  if (input == *output)
+    return true;
+  unsigned long elapsedMillis = millis() - _previousMillis;
+  if (_previousMillis == millis())
+    return false;
+  _previousMillis = millis();
+  float tempOutput = *output;
+  float tempIncrement = (maxValue / rampUp) * elapsedMillis / 1000.0;
+  float tempDecrement = (maxValue / rampUp) * elapsedMillis / 1000.0;
+  if (input > tempOutput) {
+    if (tempOutput >= 0)
+      tempOutput += tempIncrement;
+    else
+      tempOutput += tempDecrement;
+    if (tempOutput > input)
+      tempOutput = input;
+  }
+  else {
+    if (tempOutput >= 0)
+      tempOutput -= tempDecrement;
+    else
+      tempOutput -= tempIncrement;
+    if (tempOutput < input)
+      tempOutput = input;
+  }
+  *output = tempOutput;
+  return false;
+}

@@ -1,6 +1,6 @@
 {
     "name": "Miscellaneous",
-    "keywords": "timer, edge, pulse",
+    "keywords": "timer, edge, pulse, ramp",
     "description": "An Arduino library to help",
     "repository": {
         "type": "git",
