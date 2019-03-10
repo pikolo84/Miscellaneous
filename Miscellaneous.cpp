@@ -77,10 +77,12 @@ bool NegEdge::Check (bool input) {
 }
 
 bool LinearRamp::handle (float input, float *output, float rampUp, float rampDown, float maxValue) {
-  if (input == *output)
+  if (input == *output) {
+    _previousMillis = millis();
     return true;
+  }
   unsigned long elapsedMillis = millis() - _previousMillis;
-  if (_previousMillis == millis())
+  if (elapsedMillis == 0)
     return false;
   _previousMillis = millis();
   float tempOutput = *output;
